@@ -5,7 +5,7 @@ demonstrate how to build a RAP application with Tycho.
 
 === Usage ===
 
-* Clone the repository and switch to the repository folder via the command line.
+* Clone the repository and switch to the repository/tycho folder via the command line.
 * Be sure you have Maven 3 installed. Run this command within the repository folder to build 
   the RAP application: mvn clean install
 * After the build has succeeded you will find a maildemo.war in the 
