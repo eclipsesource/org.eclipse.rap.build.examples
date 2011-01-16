@@ -1,0 +1,30 @@
+== RAP PDE Build build example ==
+
+This repository contains one bundle (which contains a RAP application) and one feature to 
+demonstrate how to build a RAP application with PDE Build. The build will be done with the
+artifacts in the com.eclipsesource.maildemo.PDEBuild.releng project.
+
+=== Usage ===
+
+* Clone the repository and switch to the repository/PDEBuild/com.eclipsesource.maildemo.PDEBuild.releng 
+  folder via the command line.
+* Run the build.sh script with the following arguments:
+  --runtimeDir "Absolute path to an Eclipse installation containing the PDE Build Plug-In"
+  --targetDir "Absolute path to a RAP Target Platform containing RAP and the Equinox SDK" 
+* After the build has succeeded you will find a maildemo.war in the 
+  com.eclipsesource.maildemo.PDEBuild.releng/build/out folder.
+* Deploy the maildemo.war to the servlet container of your choice.
+
+=== Support ===
+
+If you run into problems please use the RAP newsgroup to get help:
+http://www.eclipse.org/forums/index.php?t=thread&frm_id=34&S=7af935de3aca30bd299a973485307ada
+
+=== Further information ===
+
+http://eclipse.org/rap
+http://eclipse.org/pde/pde-build/
+
+=== License ===
+
+All files are published under the terms of the Eclipse Public License v1.0

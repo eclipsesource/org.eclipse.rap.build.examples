@@ -1,0 +1,144 @@
+<!--
+Copyright (c) 2011 EclipseSource and others.
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License v1.0
+which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html
+
+Contributors:
+    EclipseSource - initial API and implementation
+-->
+
+	<project name="Build specific targets and properties" default="noDefault">
+
+  <available
+      property="allElementsFile" 
+      file="${builder}/allElements.xml" value="${builder}/allElements.xml" />
+  <property 
+      name="allElementsFile" 
+      location="${eclipse.pdebuild.templates}/headless-build/allElements.xml" />
+
+  <import file="${allElementsFile}" />
+  <target name="allElements">
+    <antcall target="allElementsDelegator" />
+  </target>
+
+  <target name="gatherLogs">
+    <mkdir dir="${buildDirectory}/${buildLabel}/compilelogs" />
+    <antcall target="allElements">
+      <param name="target" value="gatherLogs" />
+    </antcall>
+    <unzip dest="${buildDirectory}/${buildLabel}/compilelogs" overwrite="true">
+      <fileset dir="${buildDirectory}/features">
+        <include name="**/*.log.zip" />
+      </fileset>
+    </unzip>
+  </target>
+
+  <!-- ===================================================================== -->
+  <!-- Steps to do before setup -->
+	<!-- Create and copy the necessary folders -->
+  <!-- ===================================================================== -->
+  <target name="preSetup">
+    <antcall target="tidyup" />
+    <delete dir="${buildDirectory}">
+    </delete>
+  	<mkdir dir="${buildDirectory}" />
+    <copy todir="${buildDirectory}">
+      <fileset dir="${builder}/../" />
+    </copy>
+  	<mkdir dir="${buildDirectory}/features" />
+    <copy todir="${buildDirectory}/features">
+        <fileset dir="${builder}/../">
+            <include name="*feature/**" />
+        </fileset>
+    </copy>
+  </target>
+
+  <!-- ===================================================================== -->
+  <!-- Steps to do after setup but before starting the build proper -->
+  <!-- ===================================================================== -->
+  <target name="postSetup">
+    <antcall target="getBaseComponents" />
+  </target>
+
+  <!-- ===================================================================== -->
+  <!-- Steps to do after generating the build scripts. -->
+  <!-- ===================================================================== -->
+  <target name="postGenerate">
+    <antcall target="clean" />
+  </target>
+
+  <!-- ===================================================================== -->
+  <!-- Steps to do after the build is done. -->
+  <!-- Create and copy the war file to ${outputDirectory} -->
+  <!-- ===================================================================== -->
+  <target name="postBuild">
+    <antcall target="gatherLogs" />
+
+    <property name="warDirectory" value="${buildDirectory}/war" />
+    <mkdir dir="${warDirectory}" />
+    <copy todir="${warDirectory}">
+      <fileset dir="${builder}/templates" />
+    </copy>
+
+    <property name="featureDir" value="${buildDirectory}/${buildLabel}/" />
+    <unzip dest="${warDirectory}/WEB-INF">
+      <fileset dir="${featureDir}">
+        <include name="**/*.zip" />
+      </fileset>
+    </unzip>
+
+    <property name="outputDirectory" value="${buildDirectory}/../out" />
+    <mkdir dir="${outputDirectory}" />
+    <zip destfile="${outputDirectory}/maildemo.war" basedir="${warDirectory}" />
+  </target>
+
+
+
+  <!-- ===================================================================== -->
+  <!-- Default target                                                        -->
+  <!-- ===================================================================== -->
+  <target name="noDefault">
+    <echo message="You must specify a target when invoking this file" />
+  </target>
+
+  <!-- unused targets -->
+  <target name="tagMapFiles" if="tagMaps">
+  </target>
+  <target name="preProcess">
+  </target>
+  <target name="postProcess">
+  </target>
+  <target name="preAssemble">
+  </target>
+  <target name="postAssemble">
+  </target>
+  <target name="prePackage">
+  </target>
+  <target name="postPackage">
+  </target>
+  <target name="preFetch">
+  </target>
+  <target name="postFetch">
+  </target>
+  <target name="preGenerate">
+  </target>
+  <target name="getBaseComponents" depends="checkLocalBase" unless="skipBase">
+  </target>
+  <target name="checkLocalBase">
+  </target>
+  <target name="test">
+  </target>
+  <target name="publish">
+  </target>
+  <target name="clean" unless="noclean">
+  </target>	
+  <target name="getMapFiles" depends="checkLocalMaps" unless="skipMaps">
+  </target>
+  <target name="checkLocalMaps">
+  </target>	
+  <target name="tidyup">
+  </target>	
+
+</project>

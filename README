@@ -1,16 +1,17 @@
-== RAP Tycho build example ==
+== RAP build examples ==
 
-This repository contains one bundle (which contains a RAP application) and one feature to 
-demonstrate how to build a RAP application with Tycho. 
+This repository contains different examples regarding the build process of a RAP application.
+With "build process" we mean compiling a RAP application and packaging it into a deployable
+WAR file in an automated way.
+
+Currently these build systems are covered:
+
+* Tycho - http://eclipse.org/tycho
+* PDE Build - http://eclipse.org/pde/pde-build
 
 === Usage ===
 
-* Clone the repository and switch to the repository/tycho folder via the command line.
-* Be sure you have Maven 3 installed. Run this command within the repository folder to build 
-  the RAP application: mvn clean install
-* After the build has succeeded you will find a maildemo.war in the 
-  com.eclipsesource.maildemo.tycho.feature/target folder.
-* Deploy the maildemo.war to the servlet container of your choice.
+* Read the README files in the appropriate folders.
 
 === Support ===
 
@@ -20,7 +21,6 @@ http://www.eclipse.org/forums/index.php?t=thread&frm_id=34&S=7af935de3aca30bd299
 === Further information ===
 
 http://eclipse.org/rap
-http://eclipse.org/tycho
 
 === License ===
 

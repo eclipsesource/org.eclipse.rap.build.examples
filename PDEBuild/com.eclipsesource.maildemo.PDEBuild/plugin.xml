@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.rap.ui.entrypoint">
+      <entrypoint
+            class="com.eclipsesource.maildemo.Application"
+            parameter="mail"
+            id="com.eclipsesource.maildemo.Application">
+      </entrypoint>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RAP Perspective"
+            class="com.eclipsesource.maildemo.Perspective"
+            id="com.eclipsesource.maildemo.PDEBuild.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            name="Message"
+            icon="icons/sample2.gif"
+            class="com.eclipsesource.maildemo.View"
+            id="com.eclipsesource.maildemo.PDEBuild.view">
+      </view>
+      <view
+            name="Mailboxes"
+            icon="icons/sample3.gif"
+            class="com.eclipsesource.maildemo.NavigationView"
+            id="com.eclipsesource.maildemo.PDEBuild.navigationView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Mail"
+            id="com.eclipsesource.maildemo.category">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="com.eclipsesource.maildemo.category"
+            id="com.eclipsesource.maildemo.PDEBuild.open">
+      </command>
+      <command
+            name="Open Message Dialog"
+            description="Opens a message dialog"
+            categoryId="com.eclipsesource.maildemo.category"
+            id="com.eclipsesource.maildemo.PDEBuild.openMessage">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.rap.ui.branding">
+      <branding
+            servletName="mail"
+            themeId="org.eclipse.rap.design.example.business.theme"
+            defaultEntrypointId="com.eclipsesource.maildemo.Application"
+            title="RAP Maildemo"
+            id="com.eclipsesource.maildemo.branding">
+         <presentationFactory
+               defaultLayoutId="org.eclipse.rap.design.example.business.layout"
+               name="Business PresentationFactory"
+               id="org.eclipse.rap.design.example.business.factory">
+            <defaultStackPresentation
+                  id="org.eclipse.rap.design.example.stack.view">
+            </defaultStackPresentation>
+         </presentationFactory>
+      </branding>
+   </extension>
+
+</plugin>
