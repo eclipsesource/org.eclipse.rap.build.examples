@@ -2,12 +2,13 @@
 
 This repository contains different examples regarding the build process of a RAP application.
 With "build process" we mean compiling a RAP application and packaging it into a deployable
-WAR file in an automated way.
+WAR file in an automated or manual  way.
 
 Currently these build systems are covered:
 
 * Tycho - http://eclipse.org/tycho
 * PDE Build - http://eclipse.org/pde/pde-build
+* WAR Products Tooling - http://wiki.eclipse.org/RAP/Equinox_WAR_products
 
 === Usage ===
 

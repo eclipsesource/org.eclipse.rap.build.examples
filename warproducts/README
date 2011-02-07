@@ -1,0 +1,32 @@
+== RAP Tycho build example ==
+
+This repository contains one bundle (which contains a RAP application) to 
+demonstrate how to build a RAP application with the WAR Products Tooling. 
+
+=== Usage ===
+
+* Install the WAR Products Tooling. Follow the steps described on this Wiki page:
+  http://wiki.eclipse.org/RAP/Equinox_WAR_products#Download.2FInstall
+* Make sure your target is RAP 1.4 M5 or higher.
+* Clone the repository and import the bundle com.eclipsesource.maildemo.warproducts
+  into your workspace.
+* Open the maildemo.warproduct file with the WAR Product editor.
+* Use the Export Wizard by clicking on the right corner's export icon.
+* Choose a location and a name for the war file, e.g. maildemo.war.
+* Deploy the maildemo.war to the servlet container of your choice.
+
+=== Support ===
+
+If you run into problems please use the RAP newsgroup to get help:
+http://www.eclipse.org/forums/index.php?t=thread&frm_id=34&S=7af935de3aca30bd299a973485307ada
+
+=== Further information ===
+
+http://eclipse.org/rap
+http://eclipsesource.com/blogs/2011/02/02/equinoxrap-war-products-has-moved-hello-eclipse-libra/
+http://wiki.eclipse.org/RAP/Equinox_WAR_products
+http://eclipse.org/libra
+
+=== License ===
+
+All files are published under the terms of the Eclipse Public License v1.0
