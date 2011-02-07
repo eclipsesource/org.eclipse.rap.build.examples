@@ -9,7 +9,7 @@ package com.eclipsesource.maildemo;
  */
 public interface ICommandIds {
 
-    public static final String CMD_OPEN = "com.eclipsesource.maildemo.tycho.open";
-    public static final String CMD_OPEN_MESSAGE = "com.eclipsesource.maildemo.tycho.openMessage";
+    public static final String CMD_OPEN = "com.eclipsesource.maildemo.warproducts.open";
+    public static final String CMD_OPEN_MESSAGE = "com.eclipsesource.maildemo.warproducts.openMessage";
     
 }

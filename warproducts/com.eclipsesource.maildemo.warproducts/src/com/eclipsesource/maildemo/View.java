@@ -20,7 +20,7 @@ import org.eclipse.ui.part.ViewPart;
  */
 public class View extends ViewPart {
 
-	public static final String ID = "com.eclipsesource.maildemo.tycho.view";
+	public static final String ID = "com.eclipsesource.maildemo.warproducts.view";
 	
 	public void createPartControl(Composite parent) {
 		Composite top = new Composite(parent, SWT.NONE);

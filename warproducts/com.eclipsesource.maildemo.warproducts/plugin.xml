@@ -15,7 +15,7 @@
       <perspective
             name="RAP Perspective"
             class="com.eclipsesource.maildemo.Perspective"
-            id="com.eclipsesource.maildemo.tycho.perspective">
+            id="com.eclipsesource.maildemo.warproducts.perspective">
       </perspective>
    </extension>
    <extension
@@ -25,13 +25,13 @@
             name="Message"
             icon="icons/sample2.gif"
             class="com.eclipsesource.maildemo.View"
-            id="com.eclipsesource.maildemo.tycho.view">
+            id="com.eclipsesource.maildemo.warproducts.view">
       </view>
       <view
             name="Mailboxes"
             icon="icons/sample3.gif"
             class="com.eclipsesource.maildemo.NavigationView"
-            id="com.eclipsesource.maildemo.tycho.navigationView">
+            id="com.eclipsesource.maildemo.warproducts.navigationView">
       </view>
    </extension>
    <extension
@@ -44,13 +44,13 @@
             name="Open Mailbox"
             description="Opens a mailbox"
             categoryId="com.eclipsesource.maildemo.category"
-            id="com.eclipsesource.maildemo.tycho.open">
+            id="com.eclipsesource.maildemo.warproducts.open">
       </command>
       <command
             name="Open Message Dialog"
             description="Opens a message dialog"
             categoryId="com.eclipsesource.maildemo.category"
-            id="com.eclipsesource.maildemo.tycho.openMessage">
+            id="com.eclipsesource.maildemo.warproducts.openMessage">
       </command>
    </extension>
    <extension

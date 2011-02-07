@@ -24,7 +24,7 @@ public class OpenViewAction extends Action {
 		setId(ICommandIds.CMD_OPEN);
         // Associate the action with a pre-defined command, to allow key bindings.
 		setActionDefinitionId(ICommandIds.CMD_OPEN);
-		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("com.eclipsesource.maildemo.tycho", "/icons/sample2.gif"));
+		setImageDescriptor(AbstractUIPlugin.imageDescriptorFromPlugin("com.eclipsesource.maildemo.PDEBuild", "/icons/sample2.gif"));
 	}
 	
 	public void run() {

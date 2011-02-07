@@ -1,4 +1,4 @@
-package com.eclipsesource.maildemo.tycho;
+package com.eclipsesource.maildemo.warproducts;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
@@ -10,7 +10,7 @@ import org.osgi.framework.BundleContext;
 public class Activator extends AbstractUIPlugin {
 
 	// The plug-in ID
-	public static final String PLUGIN_ID = "com.eclipsesource.maildemo.tycho"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "com.eclipsesource.maildemo.warproducts"; //$NON-NLS-1$
 
 	// The shared instance
 	private static Activator plugin;

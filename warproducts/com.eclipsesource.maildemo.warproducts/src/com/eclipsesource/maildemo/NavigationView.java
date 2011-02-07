@@ -18,7 +18,7 @@ import org.eclipse.ui.part.ViewPart;
  * View with a tree viewer. This class is contributed through the plugin.xml.
  */
 public class NavigationView extends ViewPart {
-	public static final String ID = "com.eclipsesource.maildemo.tycho.navigationView";
+	public static final String ID = "com.eclipsesource.maildemo.warproducts.navigationView";
 	private TreeViewer viewer;
 	 
 	class TreeObject {

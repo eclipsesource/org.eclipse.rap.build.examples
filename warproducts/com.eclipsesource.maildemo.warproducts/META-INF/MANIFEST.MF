@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name
-Bundle-SymbolicName: com.eclipsesource.maildemo.tycho; singleton:=true
+Bundle-SymbolicName: com.eclipsesource.maildemo.warproducts;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: com.eclipsesource.maildemo.tycho.Activator
+Bundle-Activator: com.eclipsesource.maildemo.warproducts.Activator
 Bundle-Vendor: %Bundle-Vendor
 Require-Bundle: org.eclipse.rap.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
