@@ -24,7 +24,7 @@
   <name>EclipseSource Maildemo Tycho build</name>
 
   <properties>
-		<helios-site>http://download.eclipse.org/releases/helios/</helios-site>
+		<helios-site>http://download.eclipse.org/releases/helios/</helios-site>		
 		<project-build-sourceEncoding>UTF-8</project-build-sourceEncoding>
     <tycho-version>0.10.0</tycho-version>
   </properties>
@@ -34,8 +34,8 @@
 		<module>com.eclipsesource.maildemo.tycho.feature</module>
   </modules>
 
-  <repositories>
-		<repository>
+  <repositories>   
+	<repository>
       <id>helios</id>
       <layout>p2</layout>
       <url>${helios-site}</url>
