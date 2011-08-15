@@ -24,36 +24,43 @@
   <name>EclipseSource Maildemo Tycho build</name>
 
   <properties>
-		<helios-site>http://download.eclipse.org/releases/helios/</helios-site>		
-		<project-build-sourceEncoding>UTF-8</project-build-sourceEncoding>
-    <tycho-version>0.10.0</tycho-version>
+	<indigo-site>http://download.eclipse.org/releases/indigo/</indigo-site>	
+	<orbit-site>http://download.eclipse.org/tools/orbit/downloads/drops/R20110523182458/repository/</orbit-site>	
+	<project-build-sourceEncoding>UTF-8</project-build-sourceEncoding>
+    <tycho-version>0.12.0</tycho-version>
+	<tycho-groupid>org.eclipse.tycho</tycho-groupid>
   </properties>
 
   <modules>
     <module>com.eclipsesource.maildemo.tycho</module>
-		<module>com.eclipsesource.maildemo.tycho.feature</module>
+	<module>com.eclipsesource.maildemo.tycho.feature</module>
   </modules>
 
   <repositories>   
 	<repository>
-      <id>helios</id>
+      <id>indigo</id>
       <layout>p2</layout>
-      <url>${helios-site}</url>
+      <url>${indigo-site}</url>
+    </repository>
+	<repository>
+      <id>orbit</id>
+      <layout>p2</layout>
+      <url>${orbit-site}</url>
     </repository>
   </repositories>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>org.sonatype.tycho</groupId>
+        <groupId>${tycho-groupid}</groupId>
         <artifactId>tycho-maven-plugin</artifactId>
         <version>${tycho-version}</version>
         <extensions>true</extensions>
       </plugin>
 
       <plugin>
-        <groupId>org.sonatype.tycho</groupId>
-        <artifactId>maven-osgi-compiler-plugin</artifactId>
+        <groupId>${tycho-groupid}</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
         <version>${tycho-version}</version>
         <configuration>
           <encoding>${project-build-sourceEncoding}</encoding>
@@ -61,12 +68,12 @@
       </plugin>
 
       <plugin>
-        <groupId>org.sonatype.tycho</groupId>
+        <groupId>${tycho-groupid}</groupId>
         <artifactId>target-platform-configuration</artifactId>
         <version>${tycho-version}</version>
         <configuration>
           <resolver>p2</resolver>
-					<ignoreTychoRepositories>true</ignoreTychoRepositories>
+			<ignoreTychoRepositories>true</ignoreTychoRepositories>
         </configuration>
       </plugin>
     </plugins>

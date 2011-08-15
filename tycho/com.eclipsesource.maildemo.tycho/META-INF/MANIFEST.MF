@@ -9,5 +9,5 @@ Require-Bundle: org.eclipse.rap.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ActivationPolicy: lazy
 Bundle-Localization: plugin
-Import-Package: javax.servlet;resolution:=optional,
- javax.servlet.http;resolution:=optional
+Import-Package: javax.servlet,
+ javax.servlet.http
